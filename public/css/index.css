@@ -1,4 +1,4 @@
-/* Estilos generales (aplican a todos los dispositivos) */
+/* Estilos generales */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -23,7 +23,7 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px; /* Añadido para espaciado en móviles */
+    padding: 0 20px;
 }
 
 .logo {
@@ -54,6 +54,7 @@ nav {
     text-align: center;
     background-color: #1abc9c;
     color: white;
+    margin-top: 80px; /* Margen superior para evitar solapamiento con el header */
 }
 
 .user-photo {
@@ -281,6 +282,10 @@ footer {
 /* Media Queries para móviles (menos de 768px) */
 @media (max-width: 768px) {
     /* Ajustes para el header */
+    header {
+        padding: 15px; /* Reducir el padding en móviles */
+    }
+
     nav {
         flex-direction: column;
         align-items: flex-start;
@@ -295,6 +300,7 @@ footer {
     /* Ajustes para la sección "Sobre Mí" */
     .about-section {
         padding: 80px 20px;
+        margin-top: 70px; /* Ajustar margen superior para móviles */
     }
 
     .user-photo {
