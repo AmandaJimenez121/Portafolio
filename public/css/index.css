@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* Estilos generales (aplican a todos los dispositivos) */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -23,6 +23,7 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px; /* Añadido para espaciado en móviles */
 }
 
 .logo {
@@ -275,4 +276,73 @@ footer {
 
 .social-links a:hover {
     color: #1abc9c;
+}
+
+/* Media Queries para móviles (menos de 768px) */
+@media (max-width: 768px) {
+    /* Ajustes para el header */
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    /* Ajustes para la sección "Sobre Mí" */
+    .about-section {
+        padding: 80px 20px;
+    }
+
+    .user-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-section h1 {
+        font-size: 28px;
+    }
+
+    .about-section p {
+        font-size: 16px;
+    }
+
+    /* Ajustes para la sección "Habilidades" */
+    .skills-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+
+    /* Ajustes para la sección "Portafolio" */
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+
+    /* Ajustes para la sección "Contacto" */
+    .form-container {
+        padding: 15px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+    }
+
+    .form-container button {
+        font-size: 14px;
+    }
+}
+
+/* Media Queries para tablets y PCs (768px en adelante) */
+@media (min-width: 768px) {
+    /* Ajustes específicos para pantallas más grandes */
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 }
