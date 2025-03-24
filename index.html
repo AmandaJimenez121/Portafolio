@@ -11,7 +11,12 @@
     <header>
         <nav>
             <div class="logo">Portafolio de Amanda</div>
-            <ul class="nav-links">
+            <!-- Icono del menú hamburguesa -->
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <!-- Menú de navegación -->
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#about">Sobre Mí</a></li>
                 <li><a href="#skills">Habilidades</a></li>
                 <li><a href="#portfolio">Portafolio</a></li>
@@ -93,5 +98,14 @@
         </div>
     </footer>
 
+    <!-- Script para el menú desplegable -->
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
